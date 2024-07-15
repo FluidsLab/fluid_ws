@@ -19,6 +19,9 @@ sind = lambda degrees: sin(deg2rad(degrees))
 cosd = lambda degrees: cos(deg2rad(degrees))
 tand = lambda degrees: tan(deg2rad(degrees))
 
+@st.cache_data
+def read_markdown_file(markdown_file):
+    return Path(markdown_file).read_text()
 
 st.set_page_config(page_title="Data Processor", layout="wide")
 
